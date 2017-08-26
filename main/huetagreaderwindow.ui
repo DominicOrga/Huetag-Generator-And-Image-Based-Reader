@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>huetagreaderwindowClass</class>
+ <widget class="QMainWindow" name="huetagreaderwindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1898</width>
+    <height>1014</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>huetagreaderwindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(33, 33, 33);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="BrowseButton">
+    <property name="geometry">
+     <rect>
+      <x>1720</x>
+      <y>20</y>
+      <width>141</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(106, 27, 154); color : white;
+qproperty-frame : false;</string>
+    </property>
+    <property name="text">
+     <string>Browse</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MainImageView">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>80</y>
+      <width>1028</width>
+      <height>785</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BinaryThreshImageView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>368</width>
+      <height>276</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContoursImageView">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>80</y>
+      <width>368</width>
+      <height>276</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ImagePathText">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>20</y>
+      <width>881</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid white;
+background-color: rgb(66, 66, 66); color : white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="BinaryThreshSlider">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>460</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="BinaryThreshText">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>420</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid white;
+background-color: rgb(66, 66, 66) ; 
+color : white;</string>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_8">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>414</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Threshold:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_9">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>357</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Binary Threshold</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_10">
+    <property name="geometry">
+     <rect>
+      <x>32</x>
+      <y>357</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ContourAreaThresholdText">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>420</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid white;
+background-color: rgb(66, 66, 66) ; 
+color : white;</string>
+    </property>
+    <property name="text">
+     <string>2.5</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_15">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>414</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Contour Min Area Threhold:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="ContourAreaThresholdSlider">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>460</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_16">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>357</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Square Contours</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_17">
+    <property name="geometry">
+     <rect>
+      <x>432</x>
+      <y>357</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ContourAreaMaxThreshText">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>513</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid white;
+background-color: rgb(66, 66, 66) ; 
+color : white;</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_18">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>507</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Contour Max Area Threshold:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="ContourAreaMaxThreshSlider">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>550</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_19">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>880</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Decoded Markers</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_20">
+    <property name="geometry">
+     <rect>
+      <x>832</x>
+      <y>865</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BinaryThreshImagePreview">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>371</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ContoursImagePreview">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>80</y>
+      <width>371</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ManageMarkerButton">
+    <property name="geometry">
+     <rect>
+      <x>1670</x>
+      <y>930</y>
+      <width>191</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(25, 118, 210); color : white;
+qproperty-frame : false;</string>
+    </property>
+    <property name="text">
+     <string>Manage Markers</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UpdateButton">
+    <property name="geometry">
+     <rect>
+      <x>1230</x>
+      <y>930</y>
+      <width>191</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LogButton">
+    <property name="geometry">
+     <rect>
+      <x>1450</x>
+      <y>930</y>
+      <width>191</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(106, 27, 154); color : white;
+qproperty-frame : false;</string>
+    </property>
+    <property name="text">
+     <string>Open Log</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ImagePreview">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>193</y>
+      <width>1136</width>
+      <height>852</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgba(0, 0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DataCellCoordImageView">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>590</y>
+      <width>368</width>
+      <height>276</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>368</width>
+      <height>276</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_13">
+    <property name="geometry">
+     <rect>
+      <x>32</x>
+      <y>867</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DataCellCoordImagePreview">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>590</y>
+      <width>371</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>870</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Data-Cell Coordinates</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>867</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(198, 40, 40); color : white;</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="GaussianKernelSlider">
+    <property name="geometry">
+     <rect>
+      <x>498</x>
+      <y>950</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>50</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BlurImagePreview">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>590</y>
+      <width>371</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>870</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Gaussian Blur</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="GaussianKernelText">
+    <property name="geometry">
+     <rect>
+      <x>668</x>
+      <y>916</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid white;
+background-color: rgb(66, 66, 66) ; 
+color : white;</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BlurImageView">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>590</y>
+      <width>368</width>
+      <height>276</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>368</width>
+      <height>276</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0,0,0);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ContourEpsilonLabel_21">
+    <property name="geometry">
+     <rect>
+      <x>498</x>
+      <y>910</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
+    </property>
+    <property name="text">
+     <string>Gaussian Kernel Size:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>UpdateButton</zorder>
+   <zorder>LogButton</zorder>
+   <zorder>ManageMarkerButton</zorder>
+   <zorder>BrowseButton</zorder>
+   <zorder>MainImageView</zorder>
+   <zorder>BinaryThreshImageView</zorder>
+   <zorder>ContoursImageView</zorder>
+   <zorder>ImagePathText</zorder>
+   <zorder>BinaryThreshSlider</zorder>
+   <zorder>BinaryThreshText</zorder>
+   <zorder>ContourEpsilonLabel_8</zorder>
+   <zorder>ContourEpsilonLabel_9</zorder>
+   <zorder>ContourEpsilonLabel_10</zorder>
+   <zorder>ContourAreaThresholdText</zorder>
+   <zorder>ContourEpsilonLabel_15</zorder>
+   <zorder>ContourAreaThresholdSlider</zorder>
+   <zorder>ContourEpsilonLabel_16</zorder>
+   <zorder>ContourEpsilonLabel_17</zorder>
+   <zorder>ContourAreaMaxThreshText</zorder>
+   <zorder>ContourEpsilonLabel_18</zorder>
+   <zorder>ContourAreaMaxThreshSlider</zorder>
+   <zorder>ContourEpsilonLabel_19</zorder>
+   <zorder>ContourEpsilonLabel_20</zorder>
+   <zorder>DataCellCoordImageView</zorder>
+   <zorder>ContourEpsilonLabel_13</zorder>
+   <zorder>ContourEpsilonLabel_3</zorder>
+   <zorder>ContourEpsilonLabel_5</zorder>
+   <zorder>GaussianKernelSlider</zorder>
+   <zorder>ContourEpsilonLabel_2</zorder>
+   <zorder>GaussianKernelText</zorder>
+   <zorder>BlurImageView</zorder>
+   <zorder>ContourEpsilonLabel_21</zorder>
+   <zorder>DataCellCoordImagePreview</zorder>
+   <zorder>BlurImagePreview</zorder>
+   <zorder>ContoursImagePreview</zorder>
+   <zorder>BinaryThreshImagePreview</zorder>
+   <zorder>ImagePreview</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="huetagreaderwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
