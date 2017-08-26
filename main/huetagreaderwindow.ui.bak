@@ -472,7 +472,7 @@ color : white;</string>
      <string notr="true">background-color : rgb(33, 33, 33); color : white;</string>
     </property>
     <property name="text">
-     <string>Decoded Huetags</string>
+     <string>Decoded Markers</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -555,7 +555,7 @@ color : white;</string>
 qproperty-frame : false;</string>
     </property>
     <property name="text">
-     <string>Generate Huetag</string>
+     <string>Manage Markers</string>
     </property>
    </widget>
    <widget class="QPushButton" name="UpdateButton">

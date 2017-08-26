@@ -313,7 +313,7 @@ public:
         BlurImageView->setScaledContents(true);
         ContourEpsilonLabel_21 = new QLabel(centralWidget);
         ContourEpsilonLabel_21->setObjectName(QStringLiteral("ContourEpsilonLabel_21"));
-        ContourEpsilonLabel_21->setGeometry(QRect(498, 910, 161, 31));
+        ContourEpsilonLabel_21->setGeometry(QRect(560, 910, 101, 31));
         ContourEpsilonLabel_21->setFont(font3);
         ContourEpsilonLabel_21->setStyleSheet(QStringLiteral("background-color : rgb(33, 33, 33); color : white;"));
         ContourEpsilonLabel_21->setAlignment(Qt::AlignCenter);
@@ -379,11 +379,11 @@ public:
         ContourEpsilonLabel_17->setText(QApplication::translate("huetagreaderwindowClass", "2", Q_NULLPTR));
         ContourAreaMaxThreshText->setText(QApplication::translate("huetagreaderwindowClass", "5", Q_NULLPTR));
         ContourEpsilonLabel_18->setText(QApplication::translate("huetagreaderwindowClass", "Contour Max Area Threshold:", Q_NULLPTR));
-        ContourEpsilonLabel_19->setText(QApplication::translate("huetagreaderwindowClass", "Decoded Markers", Q_NULLPTR));
+        ContourEpsilonLabel_19->setText(QApplication::translate("huetagreaderwindowClass", "Decoded Huetags", Q_NULLPTR));
         ContourEpsilonLabel_20->setText(QApplication::translate("huetagreaderwindowClass", "5", Q_NULLPTR));
         BinaryThreshImagePreview->setText(QString());
         ContoursImagePreview->setText(QString());
-        ManageMarkerButton->setText(QApplication::translate("huetagreaderwindowClass", "Manage Markers", Q_NULLPTR));
+        ManageMarkerButton->setText(QApplication::translate("huetagreaderwindowClass", "Generate Huetag", Q_NULLPTR));
         UpdateButton->setText(QApplication::translate("huetagreaderwindowClass", "Update", Q_NULLPTR));
         LogButton->setText(QApplication::translate("huetagreaderwindowClass", "Open Log", Q_NULLPTR));
         ImagePreview->setText(QString());
@@ -393,10 +393,10 @@ public:
         ContourEpsilonLabel_3->setText(QApplication::translate("huetagreaderwindowClass", "Data-Cell Coordinates", Q_NULLPTR));
         ContourEpsilonLabel_5->setText(QApplication::translate("huetagreaderwindowClass", "4", Q_NULLPTR));
         BlurImagePreview->setText(QString());
-        ContourEpsilonLabel_2->setText(QApplication::translate("huetagreaderwindowClass", "Gaussian Blur", Q_NULLPTR));
+        ContourEpsilonLabel_2->setText(QApplication::translate("huetagreaderwindowClass", "Box Blur", Q_NULLPTR));
         GaussianKernelText->setText(QApplication::translate("huetagreaderwindowClass", "3", Q_NULLPTR));
         BlurImageView->setText(QApplication::translate("huetagreaderwindowClass", "TextLabel", Q_NULLPTR));
-        ContourEpsilonLabel_21->setText(QApplication::translate("huetagreaderwindowClass", "Gaussian Kernel Size:", Q_NULLPTR));
+        ContourEpsilonLabel_21->setText(QApplication::translate("huetagreaderwindowClass", "Kernel Size:", Q_NULLPTR));
     } // retranslateUi
 
 };
