@@ -1,10 +1,10 @@
 # Huetag Generator and Image-Based Reader
 
 ## Description
-As part of Huetag's disclosed equipment in its research paper, this project demonstrates the Huetag system's marker detection algorithm and marker generation using its default generator key.
+As part of Huetag's disclosed equipment in its research paper, this project demonstrates the Huetag system's marker identification algorithm and marker generation using its default generator key.
 
 The objectives of this application are limited to:
-* Examining the Huetag marker system regarding its marker detection capabilities.
+* Examining the Huetag marker system regarding its marker identification capabilities, particularly when sample images are subjected to various lighting situations.
 * Producing sample markers for the aforementioned examination.
 
 **Note: This is not a library for the Huetag system.**
