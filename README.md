@@ -34,6 +34,10 @@ The project requires the installation of the following software tools:
   3. To save an image, simply press the 'Save Image' button.
   
       ![generate-huetag](https://user-images.githubusercontent.com/12520299/29742396-18070fde-8ab1-11e7-8833-37a95ce8ef0e.gif)
-      
+   
+## See Also
+Real-Time Huetag Reader Prototype. Available: https://github.com/DominicOrga/Real-Time-Huetag-Reader-Prototype
+Huetag Sample Image. Available: https://doi.org/10.6084/m9.figshare.5349934
+   
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
