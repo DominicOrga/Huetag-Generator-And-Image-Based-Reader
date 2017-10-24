@@ -9,6 +9,9 @@ The objectives of this application are limited to:
 
 **Note: This is not a library for the Huetag system.**
 
+## Standalone Application
+Available: "\x64\Debug\Huetag Writer and Image-Based Reader.exe"
+
 ## Prerequisites
 The project requires the installation of the following software tools:
 1. Qt (version 5.9 recommended)
