@@ -226,6 +226,7 @@ namespace orga
 
 		orga::_logger.writeln("SeR = " + QString::number(rd));
 		orga::_logger.writeln("SeG = " + QString::number(gd));
+
 		orga::_logger.writeln("SeY = " + QString::number(yd));
 		orga::_logger.writeln("SeB = " + QString::number(bd));
 

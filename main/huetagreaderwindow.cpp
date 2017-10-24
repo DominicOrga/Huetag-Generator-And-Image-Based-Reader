@@ -170,18 +170,19 @@ void huetagreaderwindow::updateDataCellCoordImage()
 		std::vector<cv::Point*>* squareContour = _squareContours.at(i);
 
 		std::vector<cv::Point> dataCellPoints;
-
 		orga::extractDataCellPoints(squareContour, OUT dataCellPoints, 6);
-
 		std::vector<cv::Point*>* copy = new std::vector<cv::Point*>();
-		for (int j = 0; j < dataCellPoints.size(); j++)
-		{
+		for (int j = 0; j < dataCellPoints.size(); j++) {
 			copy->push_back(new cv::Point(dataCellPoints.at(j)));
-
-			cv::circle(image_temp, dataCellPoints.at(j), 2, cv::Scalar(255, 255, 255), 2);
+				
+			switch (j) {
+			case 0: cv::circle(image_temp, dataCellPoints.at(j), 2, cv::Scalar(255, 0, 0), 2); break;
+			case 1: cv::circle(image_temp, dataCellPoints.at(j), 2, cv::Scalar(0, 0, 255), 2); break;
+			default: cv::circle(image_temp, dataCellPoints.at(j), 2, cv::Scalar(255, 255, 255), 2);
+			}
 		}
 
-		_dataCellCoordinates.push_back(copy);
+		_dataCellCoordinates.push_back(copy);	
 	}
 
 	QImage qImage = QImage(
